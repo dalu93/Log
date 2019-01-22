@@ -5,7 +5,11 @@ public struct LogLevel {
     /// Defines how the initial message from user
     /// changes, depending on the `LogMode` and
     /// other factors
-    let whenPrinting: (String, LogMode) -> String?
+    public let whenPrinting: (String, LogMode) -> String?
+
+    public init(whenPrinting: @escaping (String, LogMode) -> String?) {
+        self.whenPrinting = whenPrinting
+    }
 }
 
 public extension LogLevel {
