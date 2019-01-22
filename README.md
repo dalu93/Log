@@ -8,7 +8,7 @@ You can install Log 📝 with SPM
 
 1. Add or amend a `Package.swift`
 2. Add this dependency
-   `.package(url: "https://github.com/dalu93/Log.git", from: "0.1.0")`
+   `.package(url: "https://github.com/dalu93/Log.git", from: "1.0.0")`
 3. Then import `Log` in your code and start using it 🎉
 
 ## Usage
