@@ -47,10 +47,22 @@ let package = Package(
         ],
         "rocket": ["steps":
             [
+                ["script": ["content": "echo \"Releasing $VERSION\""]],
                 "hide_dev_dependencies",
+                ["git_add": ["paths": ["Package.swift"]]],
+                ["commit": [
+                    "message": "Release of version $VERSION",
+                    "no_verify": true,
+                ]],
                 "tag",
-                "push",
                 "unhide_dev_dependencies",
+                ["git_add": ["paths": ["Package.swift"]]],
+                ["commit": [
+                    "message": "Unhide dev dependencies",
+                    "no_verify": true,
+                ]],
+                "push",
+                ["script": ["content": "echo \"Version $VERSION release 🎉\""]],
         ]],
     ])
 #endif
