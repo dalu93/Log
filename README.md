@@ -1,2 +1,3 @@
-# log
-Swift logging utility
+# Log
+
+A description of this package.
